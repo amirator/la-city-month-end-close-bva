@@ -1,0 +1,24 @@
+// Power BI measures for the LA City close / BvA star schema (powerbi/*.csv).
+// Relationships: fct_actual_monthly[period_key] -> dim_period[period_key];
+//   fct_* [dept_code] -> dim_department, [fund_code] -> dim_fund, [account_code] -> dim_account (single direction).
+// Mirrors sql/02_close.sql; not validated inside Power BI Desktop (authored as text).
+
+Actual Postings = SUM ( fct_actual_monthly[amount] )
+Postings YTD = TOTALYTD ( [Actual Postings], dim_period[month_start], "06-30" )
+Postings PY = CALCULATE ( [Actual Postings], dim_period[fiscal_year] = MAX ( dim_period[fiscal_year] ) - 1, ALL ( dim_period ) )
+Postings YoY % = DIVIDE ( [Actual Postings] - [Postings PY], [Postings PY] )
+
+Adopted Budget = SUM ( fct_budget[adopted_budget] )
+Revised Budget = SUM ( fct_budget[revised_budget] )
+Committed = SUM ( fct_budget[total_expenditures] )          // actual + encumbrance
+Remaining Budget = [Revised Budget] - [Committed]
+Utilisation % = DIVIDE ( [Committed], [Revised Budget] )
+In-Year Adjustments = [Revised Budget] - [Adopted Budget]
+
+Straight-Line Budget YTD =
+    VAR m = MAX ( dim_period[fiscal_month] )
+    RETURN [Revised Budget] * m / 12
+Phasing Variance = [Postings YTD] - [Straight-Line Budget YTD]
+
+Ledger Difference = [Actual Postings] - [Committed]          // subledger vs budget ledger tie-out
+Ties Flag = IF ( ABS ( [Ledger Difference] ) < 1, "ties", "reconciling item" )

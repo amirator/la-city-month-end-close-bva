@@ -1,0 +1,174 @@
+{
+  "fy": 2026,
+  "monthly_postings": 46686931997.37,
+  "budget_ledger_expenditures": 47171293319.74,
+  "net_difference": -484361322.37,
+  "recon": {
+    "budget ledger only": {
+      "lines": 3,
+      "difference": -4762279.46
+    },
+    "monthly postings only": {
+      "lines": 61,
+      "difference": 65432505.55
+    },
+    "reconciling item": {
+      "lines": 322,
+      "difference": -545031548.46
+    },
+    "ties": {
+      "lines": 305,
+      "difference": 0.0
+    }
+  },
+  "recon_top": [
+    [
+      "NON-DEPARTMENTAL - APPROPRIATIONS TO SPECIAL PURPOSE FUND",
+      "27M",
+      -386547425.0
+    ],
+    [
+      "NON-DEPARTMENTAL - APPROPRIATIONS TO SPECIAL PURPOSE FUND",
+      "208",
+      -150933261.0
+    ],
+    [
+      "FIRE",
+      "298",
+      -92520009.0
+    ]
+  ],
+  "gf": {
+    "adopted": 9559873866.0,
+    "revised": 10188004750.27,
+    "actual": 9546412642.46,
+    "encumbered": 170297606.01,
+    "committed": 9716795585.47,
+    "remaining": 471209164.8
+  },
+  "gf_utilisation": 0.9537,
+  "gf_low_utilisation": [
+    [
+      "GENERAL SERVICES",
+      0.7161,
+      397902980.0
+    ],
+    [
+      "NON-DEPARTMENTAL - GENERAL CITY PURPOSES",
+      0.7182,
+      263498416.0
+    ],
+    [
+      "MAYOR",
+      0.7657,
+      89128993.0
+    ]
+  ],
+  "gf_top_adjustments": [
+    [
+      "GENERAL SERVICES",
+      177859807.0
+    ],
+    [
+      "NON-DEPARTMENTAL - GENERAL",
+      138197941.0
+    ],
+    [
+      "FIRE",
+      116398582.0
+    ]
+  ],
+  "gf_over_budget_accounts": 0,
+  "gf_overrun_total": 0.0,
+  "gf_over_budget_top": [],
+  "close_checks": {
+    "negative_net_posting": {
+      "hits": 733,
+      "amount": -602036660.75
+    },
+    "spike_gt_5x_line_median": {
+      "hits": 326,
+      "amount": 2323632187.53
+    },
+    "periods_missing": {
+      "hits": 0,
+      "amount": null
+    }
+  },
+  "phasing": [
+    [
+      1,
+      "2025-07",
+      5108824846.01,
+      0.1094
+    ],
+    [
+      2,
+      "2025-08",
+      2965977123.93,
+      0.0635
+    ],
+    [
+      3,
+      "2025-09",
+      3194961387.52,
+      0.0684
+    ],
+    [
+      4,
+      "2025-10",
+      3656796274.19,
+      0.0783
+    ],
+    [
+      5,
+      "2025-11",
+      2622369530.42,
+      0.0562
+    ],
+    [
+      6,
+      "2025-12",
+      4173034495.39,
+      0.0894
+    ],
+    [
+      7,
+      "2026-01",
+      3646340840.41,
+      0.0781
+    ],
+    [
+      8,
+      "2026-02",
+      3264209753.29,
+      0.0699
+    ],
+    [
+      9,
+      "2026-03",
+      3674823498.04,
+      0.0787
+    ],
+    [
+      10,
+      "2026-04",
+      3704817316.63,
+      0.0794
+    ],
+    [
+      11,
+      "2026-05",
+      3779185855.26,
+      0.0809
+    ],
+    [
+      12,
+      "2026-06",
+      6895591076.28,
+      0.1477
+    ]
+  ],
+  "yoy_growth": 0.0649,
+  "fy2025_postings": 43839969106.19
+}

@@ -1,0 +1,6 @@
+duckdb==1.2.2
+pandas
+openpyxl
+matplotlib
+requests
+pytest

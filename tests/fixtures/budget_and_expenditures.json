@@ -1,0 +1,31 @@
+[
+{
+"budget_fiscal_year": "2026",
+"department": "01",
+"department_name": "DEPT A",
+"fund": "100",
+"fund_name": "GENERAL FUND",
+"account": "001010",
+"account_name": "SALARIES",
+"account_group_name": "SALARIES AND BENEFITS",
+"adopted_budget_amount": "1000",
+"total_budget": "1200",
+"actual_expense": "1050",
+"encumbrance_amount": "0",
+"total_expenditures": "1050"
+},
+{
+"budget_fiscal_year": "2026",
+"department": "02",
+"department_name": "DEPT B",
+"fund": "100",
+"fund_name": "GENERAL FUND",
+"account": "003040",
+"account_name": "CONTRACTS",
+"adopted_budget_amount": "500",
+"total_budget": "500",
+"actual_expense": "400",
+"encumbrance_amount": "200",
+"total_expenditures": "600"
+}
+]
